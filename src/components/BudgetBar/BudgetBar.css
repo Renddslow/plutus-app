@@ -31,6 +31,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    max-width: 660px;
 }
 
 .budget-bar-card {

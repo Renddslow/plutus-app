@@ -64,7 +64,15 @@ export default class EditModal extends React.Component {
 
   handleSave = () => {
     if (this.props.data.id) {
-
+      const data = {
+        id: this.props.data.id,
+        type: this.props.data.type,
+        attributes: {
+          ...this.state.attributes,
+          id: this.props.data.id,
+        }
+      };
+      this.props.onSave(data);
     } else {
       const data = {
         type: this.props.data.type,

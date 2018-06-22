@@ -1,0 +1,28 @@
+.month-picker {
+    margin: 8px auto;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 1;
+    color: #fff;
+}
+
+.month-picker button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    margin: 0 32px;
+}
+
+.month-picker button i {
+    color: #ddd;
+}
+
+.month-picker button:focus i {
+    color: #fff;
+}

@@ -123,3 +123,11 @@
 .modal-footer button:focus {
     border-color: #B2FFA9;
 }
+
+.close-button {
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+}

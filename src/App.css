@@ -7,6 +7,7 @@ body {
     width: 95%;
     margin: 65px auto 0;
     display: flex;
+    max-width: 600px;
 }
 
 .tab-bar-label {

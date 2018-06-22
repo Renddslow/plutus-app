@@ -25,9 +25,10 @@ export default class Select extends React.Component {
 
   handleChange = ({ target }) => {
     this.setState({
-      value: target.value,
+      value: parseInt(target.value, 10),
+    }, () => {
+      this.props.onChange({ [this.props.name]: this.state.value });
     });
-    this.props.onChange({ [this.props.name]: this.state.value });
   };
 
   render() {

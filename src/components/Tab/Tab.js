@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Item from '../Item';
+import Item from '../Item/index';
 import './Tab.css';
 
 const Tab = (props) => {
@@ -21,6 +21,8 @@ const Tab = (props) => {
               category={category.name.toLowerCase()}
               key={item.id}
               id={item.id}
+              type={item.type}
+              onMenu={props.onMenu}
             />);
           }) :
           <div className="empty-state">
@@ -39,6 +41,7 @@ Tab.propTypes = {
   isIncome: PropTypes.bool,
   isTransaction: PropTypes.bool,
   items: PropTypes.array,
+  onMenu: PropTypes.func.isRequired,
 };
 
 Tab.defaultProps = {

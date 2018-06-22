@@ -24,8 +24,9 @@ export default class Input extends React.Component {
   handleChange = ({ target }) => {
     this.setState({
       value: target.value,
+    }, () => {
+      this.props.onChange({ [this.props.name]: this.state.value });
     });
-    this.props.onChange({ [this.props.name]: this.state.value });
   };
 
   render() {

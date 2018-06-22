@@ -17,7 +17,11 @@ const Item = (props) => (
       <span>{props.name}</span>
     </div>
     <div className="spacer" />
-    <button className="more" aria-label="Open menu for budget item">
+    <button
+      className="more"
+      aria-label="Open menu for budget item"
+      onClick={() => props.onMenu(props.id, props.type)}
+    >
       <i className="material-icons">more_horiz</i>
     </button>
   </div>
@@ -26,9 +30,12 @@ const Item = (props) => (
 Item.propTypes = {
   amount: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   isIncome: PropTypes.bool,
   name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  onMenu: PropTypes.func.isRequired,
 };
 
 Item.defaultProps = {

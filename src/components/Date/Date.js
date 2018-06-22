@@ -25,8 +25,9 @@ export default class Date extends React.Component {
   handleChange = ({ target }) => {
     this.setState({
       value: moment(target.value).unix(),
+    }, () => {
+      this.props.onChange({ [this.props.name]: this.state.value });
     });
-    this.props.onChange({ [this.props.name]: this.state.value });
   };
 
   render() {

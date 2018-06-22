@@ -12,13 +12,13 @@ export default class Currency extends React.Component {
   };
 
   static defaultProps = {
-    value: '',
+    value: 0,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      value: 0,
+      value: props.value,
     };
   }
 
@@ -27,13 +27,16 @@ export default class Currency extends React.Component {
       const value = currencyFormatter.unformat(target.value, { code: 'USD' });
       this.setState({
         value: value * 1000
+      }, () => {
+        this.props.onChange({ [this.props.name]: this.state.value });
       });
       this.props.onChange({ [this.props.name]: this.state.value });
     } else if (nativeEvent.data === null) {
       this.setState((prevState) => ({
         value: prevState.value / 10,
-      }));
-      this.props.onChange({ [this.props.name]: this.state.value });
+      }), () => {
+        this.props.onChange({ [this.props.name]: this.state.value });
+      });
     }
   };
 
