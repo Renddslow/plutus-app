@@ -1,0 +1,40 @@
+.item {
+    width: 100%;
+    box-shadow: 0 6px 21px -6px rgba(0, 0, 0, .23);
+    background: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    margin: 16px auto;
+    max-width: 95%;
+}
+
+.item .emoji {
+    margin-left: 8px;
+}
+
+.item .details {
+    margin-left: 14px;
+    font-family:  Avenir, Helvetica, "Calibri", Arial, sans-serif;
+    color: #555;
+}
+
+.item .more {
+    margin-right: 8px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
+}
+
+.item .item-expense-amount {
+    color: #E94F37;
+}
+
+.item .item-amount {
+    color: #333;
+}

@@ -1,0 +1,103 @@
+body {
+    overflow: hidden;
+}
+
+.tab-bar {
+    border-bottom: 1px solid #dfdfdf;
+    width: 95%;
+    margin: 65px auto 0;
+    display: flex;
+}
+
+.tab-bar-label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 12px;
+    padding-bottom: 6px;
+    color: #444;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+}
+
+.tab-bar-label--transactions.active {
+    color: #247BA0;
+}
+
+.tab-bar-label--bills.active {
+    color: #CC5A71;
+}
+
+.tab-bar-label--income.active {
+    color: #824670;
+}
+
+.tab-bar-label.active::after {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    content: "";
+    bottom: -1px;
+    left: 0;
+}
+
+.tab-bar-label--transaction.active::after {
+    background: #247BA0;
+}
+
+.tab-bar-label--expense.active::after {
+    background: #CC5A71;
+}
+
+.tab-bar-label--income.active::after {
+    background: #824670;
+}
+
+.add-button {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    left: calc(50% - 24px);
+    bottom: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding-top: 6px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 8px;
+    box-shadow: 0 6px 21px -6px rgba(0, 0, 0, .23);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 0;
+}
+
+.add-button--transaction {
+    background: #247BA0;
+}
+
+.add-button--expense {
+    background: #CC5A71;
+}
+
+.add-button--income {
+    background: #824670;
+}
+
+.filter {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+}
+
+.item-container {
+    height: calc(75vh - 113px);
+    overflow-y: scroll;
+    padding: 0 0 48px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,54 @@
+.budget-bar {
+    width: 100%;
+    display: flex;
+    box-shadow: 0 8px 21px -8px rgba(0, 0, 0, .13);
+    background: #DE6449;
+    align-items: center;
+    justify-content: center;
+    height: 33vh;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.budget-bar h3 {
+    font-size: 48px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+
+.budget-bar-description {
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: #f0f0f0;
+}
+
+.budget-bar-card-container {
+    position: absolute;
+    bottom: -45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.budget-bar-card {
+    width: 45%;
+    margin: 0 8px;
+    background: #fff;
+    color: #333;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 16px 8px 8px;
+    height: 80px;
+    box-shadow: 0 6px 21px -6px rgba(0, 0, 0, .33);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.budget-bar-card h4 {
+    font-size: 1.2rem;
+}
